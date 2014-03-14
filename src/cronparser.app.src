@@ -1,7 +1,7 @@
 {application, cronparser,
  [
   {description, "CronParser utilities"},
-  {vsn, "0.0.1"},
+  {vsn, "0.0.3"},
   {registered, []},
   {applications, [
                   kernel,
