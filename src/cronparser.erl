@@ -131,7 +131,8 @@ find_best_next(Current, Allowed, Dir) ->
     end .
                          
 compute_next_time(Now,Spec) ->
-    {Date,{Hour,Minute,Seconds}} = Now,
+    {Date,{Hour,Minute,_}} = Now,
+    Seconds = 0,
     #cron_entry{minute=MinuteVals,hour=HourVals,hour_set=HoursSet} = Spec,
     [NextMinute,NextHour,NextDate] = case find_best_next(Minute, MinuteVals, next) of
                                          nil    ->
